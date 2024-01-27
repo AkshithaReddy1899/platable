@@ -35,7 +35,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final String response =
         await rootBundle.loadString('assets/data/data.json');
     ProductModel data = ProductModel.fromJson(json.decode(response));
-    print(data);
 
     setState(() {
       allProducts = data.products;

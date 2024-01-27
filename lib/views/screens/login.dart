@@ -2,8 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:platable/constants/app_constants.dart';
-import 'package:platable/views/screens/home_screen.dart';
+
+import '../../constants/app_constants.dart';
+import '../../constants/components/bottom_nav_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -19,7 +20,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _auth.authStateChanges().listen((event) {
       setState(() {
@@ -30,10 +30,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _handleGoogleSignIn() {
     try {
-      GoogleAuthProvider _googleAuthProvider = GoogleAuthProvider();
-      _auth.signInWithProvider(GoogleAuthProvider());
+      GoogleAuthProvider googleAuthProvider = GoogleAuthProvider();
+      _auth.signInWithProvider(googleAuthProvider);
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
     } catch (error) {
       print(error);
     }
@@ -112,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 _handleGoogleSignIn();
                               },
                               child: Container(
-                                padding: const EdgeInsets.all(25),
+                                padding: const EdgeInsets.all(15),
                                 child: Image.asset(
                                   'assets/images/google-symbol.png',
                                   fit: BoxFit.fill,
