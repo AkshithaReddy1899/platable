@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "512321205006",
+    "project_id": "platable-d3e07",
+    "storage_bucket": "platable-d3e07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512321205006:android:86f5c92a7d29719301dd5f",
+        "android_client_info": {
+          "package_name": "com.example.platable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512321205006-obm38bl2a1ueg7b47k6iovs508atlos7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ0TQNC1WzGCr6_gn9S6eIBFOOfLjFQGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512321205006-obm38bl2a1ueg7b47k6iovs508atlos7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
