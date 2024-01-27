@@ -362,9 +362,9 @@ class _BagScreenState extends ConsumerState<BagScreen> {
                       });
 
                       Future.delayed(const Duration(milliseconds: 900), () {
-                        setState(() {
-                          isLoading = false;
-                        });
+                        // setState(() {
+                        //   isLoading = false;
+                        // });
                         SnackBar snackBar = const SnackBar(
                           content: Text('Payment success'),
                         );

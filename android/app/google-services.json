@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "512321205006",
+    "firebase_url": "https://platable-d3e07-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "platable-d3e07",
     "storage_bucket": "platable-d3e07.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "512321205006-4v3r4lus7hiqfhiqa46e2tpkst5iuioa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.platable",
+            "certificate_hash": "a1c3bb9d8c88ef34e2c963e59b6c3506cee2c67e"
+          }
+        },
         {
           "client_id": "512321205006-obm38bl2a1ueg7b47k6iovs508atlos7.apps.googleusercontent.com",
           "client_type": 3

@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:platable/constants/app_constants.dart';
+import 'package:platable/views/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -11,6 +13,32 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  User? _user;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _auth.authStateChanges().listen((event) {
+      setState(() {
+        _user = event;
+      });
+    });
+  }
+
+  void _handleGoogleSignIn() {
+    try {
+      GoogleAuthProvider _googleAuthProvider = GoogleAuthProvider();
+      _auth.signInWithProvider(GoogleAuthProvider());
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+    } catch (error) {
+      print(error);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -79,11 +107,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Radius.circular(15),
                               ),
                             ),
-                            child: Container(
-                              padding: const EdgeInsets.all(25),
-                              child: Image.asset(
-                                'assets/images/google-symbol.png',
-                                fit: BoxFit.fill,
+                            child: TextButton(
+                              onPressed: () {
+                                _handleGoogleSignIn();
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.all(25),
+                                child: Image.asset(
+                                  'assets/images/google-symbol.png',
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                           ),
