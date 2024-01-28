@@ -59,7 +59,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: SingleChildScrollView(
           child: Container(
             width: screenSize.width,
-            height: screenSize.height,
             padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
