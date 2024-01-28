@@ -17,6 +17,8 @@ class _AccountScreenState extends State<AccountScreen> {
           width: screenSize.width,
           height: screenSize.height,
           child: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [Text('Account Screen')],
           ),
         ),

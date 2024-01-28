@@ -28,6 +28,7 @@ class Products {
   String? name;
   String? image;
   String? icon;
+  String? brandColor;
   String? color;
   String? productName;
   TimeSlot? timeSlot;
@@ -45,6 +46,7 @@ class Products {
       this.name,
       this.image,
       this.icon,
+      this.brandColor,
       this.color,
       this.productName,
       this.timeSlot,
@@ -62,11 +64,11 @@ class Products {
     name = json['name'];
     image = json['image'];
     icon = json['icon'];
+    brandColor = json['brand_color'];
     color = json['color'];
     productName = json['product_name'];
-    timeSlot = json['time_slot'] != null
-        ? TimeSlot.fromJson(json['time_slot'])
-        : null;
+    timeSlot =
+        json['time_slot'] != null ? TimeSlot.fromJson(json['time_slot']) : null;
     stars = json['stars'];
     distance = json['distance'];
     stock = json['stock'];
@@ -88,6 +90,7 @@ class Products {
     data['name'] = name;
     data['image'] = image;
     data['icon'] = icon;
+    data['brand_color'] = brandColor;
     data['color'] = color;
     data['product_name'] = productName;
     if (timeSlot != null) {
@@ -135,7 +138,7 @@ class Reviews {
   Reviews({this.name, this.comment, this.reviewStars, this.time});
 
   Reviews.fromJson(Map<String, dynamic> json) {
-    if(json['name'] != null) {
+    if (json['name'] != null) {
       name = Name.fromJson(json['name']);
     }
     comment = json['comment'];

@@ -94,6 +94,16 @@ class AppConstant {
     );
   };
 
+  var commonHeadingText = (label) {
+    return Text(
+      label,
+      style: TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 16,
+          color: AppConstant.primaryTextColor),
+    );
+  };
+
   var sideHeadings = (Size screenSize, String label) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -270,10 +280,15 @@ class AppConstant {
 extension ColorExtension on String {
   toColor() {
     var hexColor = replaceAll("#", "");
+    print(hexColor.length);
     if (hexColor.length == 6) {
+      print('6');
       hexColor = "FF$hexColor";
+      print(hexColor);
     }
     if (hexColor.length == 8) {
+      print('8');
+      print(Color(int.parse("0x$hexColor")));
       return Color(int.parse("0x$hexColor"));
     }
   }

@@ -17,6 +17,8 @@ class _BrowserScreenState extends State<BrowserScreen> {
           width: screenSize.width,
           height: screenSize.height,
           child: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text('Browser Screen'),
             ],

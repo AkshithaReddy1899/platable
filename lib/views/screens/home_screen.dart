@@ -19,6 +19,7 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   List<Products>? allProducts = [];
+  List<Products>? saveProducts = [];
 
   ScrollController scrollController = ScrollController(
     initialScrollOffset: 10,
@@ -34,12 +35,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Future<void> readJson() async {
     final String response =
         await rootBundle.loadString('assets/data/data.json');
+
+         final String saveResponse =
+        await rootBundle.loadString('assets/data/save.json');
     ProductModel data = ProductModel.fromJson(json.decode(response));
+    ProductModel saveData = ProductModel.fromJson(json.decode(saveResponse));
+    
 
     setState(() {
       allProducts = data.products;
+      saveProducts = saveData.products;
     });
     print(allProducts);
+    print(allProducts![0].brandColor);
   }
 
   @override
@@ -85,7 +93,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             );
                           },
                           child: ProductContainer(
-                              containerSize: const Size(150, 600),
+                              containerSize: const Size(160, 600),
                               circleRadius: 60,
                               product: allProducts![index]),
                         ),
@@ -103,7 +111,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     controller: scrollController,
-                    itemCount: allProducts!.length,
+                    itemCount: saveProducts!.length,
                     itemBuilder: (context, index) {
                       return Container(
                         margin: const EdgeInsets.only(left: 10, right: 10),
@@ -113,15 +121,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => ProductDetailScreen(
-                                  product: allProducts![index],
+                                  product: saveProducts![index],
                                 ),
                               ),
                             );
                           },
                           child: ProductContainer(
-                              containerSize: const Size(150, 600),
+                              containerSize: const Size(160, 600),
                               circleRadius: 60,
-                              product: allProducts![index]),
+                              product: saveProducts![index]),
                         ),
                       );
                     },

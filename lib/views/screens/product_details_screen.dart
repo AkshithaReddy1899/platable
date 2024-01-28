@@ -103,14 +103,14 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                                             borderRadius:
                                                 const BorderRadius.all(
                                                     Radius.circular(30)),
-                                            color: AppConstant.primaryColor),
+                                            color:  widget.product.brandColor!.toColor()),
                                         child: Image.asset(
                                             widget.product.icon.toString()),
                                       ),
                                       Text(
                                         widget.product.name.toString(),
                                         style: TextStyle(
-                                            color: AppConstant.primaryColor,
+                                            color:  widget.product.brandColor!.toColor(),
                                             fontSize: 22),
                                       ),
                                     ],
@@ -377,7 +377,7 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                             width: screenSize.width,
                             height: 400,
                             child: ProductReviews(
-                                reviews: widget.product.reviews!),
+                                product: widget.product),
                           ),
                         ),
                         const Divider(
@@ -417,7 +417,7 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                                           );
                                         },
                                         child: ProductContainer(
-                                            containerSize: const Size(150, 600),
+                                            containerSize: const Size(160, 600),
                                             circleRadius: 60,
                                             product: allProducts![index]),
                                       ),

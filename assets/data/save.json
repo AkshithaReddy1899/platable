@@ -1,0 +1,200 @@
+{
+	"products": [
+		{
+			"id": 2,
+			"name": "Chili's",
+			"image": "https://tse2.mm.bing.net/th?id=OIP.EPKvxgKjMwue-Ia7ppntFAHaHa&pid=Api&P=0&h=180",
+			"icon": "assets/images/product_icons/Chili.png",
+			"brand_color": "#5E9633",
+			"color": "0xffffffff",
+			"product_name": "Chipotle Chicken Fresh Mex Bowl",
+			"time_slot": {
+					"day": "Tomorrow",
+					"time_range": "17.00 - 21.00"
+			},
+			"stars": "4.6",
+			"distance": "3 km",
+			"stock": 8,
+			"actual_price": 543,
+			"today_price": 2,
+			"description": "Chipotle Chicken Fresh Mex Bowl Extra Crisp Romaine, Crumbled Feta, Stacy's® Pita Chips, House-Cooked Chickpeas, Sliced Grape Tomatoes, Overnight Pickled Onion, Sliced Cucumbers",
+			"quantity": 1,
+			"reviews": [
+					{
+							"name": {
+									"first_name": "Jacob",
+									"last_name": "Hackson"
+							},
+							"comment": "Love it",
+							"review_stars": 4.0,
+							"time": "2d ago"
+					},
+					{
+							"name": {
+									"first_name": "Jacob",
+									"last_name": "Hackson"
+							},
+							"comment": "Nice",
+							"review_stars": 4.0,
+							"time": "56m ago"
+					},
+					{
+							"name": {
+									"first_name": "Jacob",
+									"last_name": "Gackson"
+							},
+							"comment": "I recommend to everyone!",
+							"review_stars": 2.0,
+							"time": "1d ago"
+					}
+			]
+	},
+	{
+			"id": 3,
+			"name": "Bojangles",
+			"image": "https://tse4.mm.bing.net/th?id=OIP.nDMkayeFSwDN5sB6HNI1IQHaE8&pid=Api&P=0&h=180",
+			"icon": "assets/images/product_icons/Bojangles.png",
+			"brand_color": "#D30321",
+			"color": "0xfffdd900",
+			"product_name": "Spicy Chicken Sandwhices",
+			"time_slot": {
+					"day": "Tomorrow",
+					"time_range": "19.00 - 21.00"
+			},
+			"stars": "4.9",
+			"distance": "3.3 km",
+			"stock": 1,
+			"actual_price": 612,
+			"today_price": 4,
+			"description": "Extra Crisp Romaine, Crumbled Feta, Stacy's® Pita Chips, House-Cooked Chickpeas, Sliced Grape Tomatoes, Overnight Pickled Onion, Sliced Cucumbers",
+			"quantity": 1,
+			"reviews": [
+					{
+							"name": {
+									"first_name": "Jacob",
+									"last_name": "Hackson"
+							},
+							"comment": "Best salad in the universe",
+							"review_stars": 4.0,
+							"time": "2d ago"
+					},
+					{
+							"name": {
+									"first_name": "Jacob",
+									"last_name": "Hackson"
+							},
+							"comment": "Delicious with crazy prices!",
+							"review_stars": 4.0,
+							"time": "56m ago"
+					},
+					{
+							"name": {
+									"first_name": "Jacob",
+									"last_name": "Gackson"
+							},
+							"comment": "I recommend to everyone!",
+							"review_stars": 2.0,
+							"time": "1d ago"
+					}
+			]
+	},	
+		{
+					"id": 0,
+					"name": "Just Salad",
+					"image": "https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"icon": "assets/images/product_icons/just_salad.png",
+					"brand_color": "#FFFBFF",
+					"color": "0xff13274A",
+					"product_name": "Modern Greek Crunch",
+					"time_slot": {
+							"day": "Today",
+							"time_range": "17.00 - 21.00"
+					},
+					"stars": "4.8",
+					"distance": "8 km",
+					"stock": 6,
+					"actual_price": 612,
+					"today_price": 4,
+					"description": "Extra Crisp Romaine, Crumbled Feta, Stacy's® Pita Chips, House-Cooked Chickpeas, Sliced Grape Tomatoes, Overnight Pickled Onion, Sliced Cucumbers",
+					"quantity": 1,
+					"reviews": [
+							{
+									"name": {
+											"first_name": "Jacob",
+											"last_name": "Hackson"
+									},
+									"comment": "Good food",
+									"review_stars": 4.0,
+									"time": "2d ago"
+							},
+							{
+									"name": {
+											"first_name": "Jacob",
+											"last_name": "Hackson"
+									},
+									"comment": "Nice!",
+									"review_stars": 4.0,
+									"time": "56m ago"
+							},
+							{
+									"name": {
+											"first_name": "Jacob",
+											"last_name": "Gackson"
+									},
+									"comment": "I recommend to everyone!",
+									"review_stars": 2.0,
+									"time": "1d ago"
+							}
+					]
+			},
+			{
+					"id": 1,
+					"name": "Wallmart",
+					"image": "https://tse2.mm.bing.net/th?id=OIP.M6WpNRjb4xueJktsmw1D-wHaHa&pid=Api&P=0&h=180",
+					"icon": "assets/images/product_icons/wallmart.png",
+					"brand_color": "#FFFBFF",
+					"color": "0xff2B71D5",
+					"product_name": "The Only Bean - Crunchy Roasted beans",
+					"time_slot": {
+							"day": "Tomorrow",
+							"time_range": "17.00 - 21.00"
+					},
+					"stars": "4.7",
+					"distance": "2.5 km",
+					"stock": 6,
+					"actual_price": 234,
+					"today_price": 5,
+					"description": "Extra Crisp Romaine, Crumbled Feta, Stacy's® Pita Chips, House-Cooked Chickpeas, Sliced Grape Tomatoes, Overnight Pickled Onion, Sliced Cucumbers",
+					"quantity": 1,
+					"reviews": [
+							{
+									"name": {
+											"first_name": "Jacob",
+											"last_name": "Hackson"
+									},
+									"comment": "Good",
+									"review_stars": 4.0,
+									"time": "2d ago"
+							},
+							{
+									"name": {
+											"first_name": "Jacob",
+											"last_name": "Hackson"
+									},
+									"comment": "TGreat food!",
+									"review_stars": 4.0,
+									"time": "56m ago"
+							},
+							{
+									"name": {
+											"first_name": "Jacob",
+											"last_name": "Gackson"
+									},
+									"comment": "I recommend to everyone!",
+									"review_stars": 2.0,
+									"time": "1d ago"
+							}
+					]
+			}
+	]
+}

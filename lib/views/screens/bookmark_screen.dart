@@ -17,6 +17,8 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
           width: screenSize.width,
           height: screenSize.height,
           child: const Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [Text('Bookmark Screen')],
           ),
         ),

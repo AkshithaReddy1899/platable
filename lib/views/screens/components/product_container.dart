@@ -65,36 +65,52 @@ class _ProductContainerState extends State<ProductContainer> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(15.0)),
-                        color: widget.product.color!.toColor(),
-                      ),
-                      width: widget.containerSize.width,
-                      height: widget.containerSize.height / 8,
-                      padding: EdgeInsets.only(top: widget.circleRadius / 2),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.all(8),
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(30)),
-                                color: AppConstant.primaryColor),
-                            child: Image.asset(widget.product.icon.toString()),
+                    Stack(
+                      alignment: Alignment.topRight,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(15.0)),
+                            color: widget.product.color!.toColor(),
                           ),
-                          Text(
-                            widget.product.name.toString(),
-                            style: TextStyle(
-                                color: AppConstant.primaryColor, fontSize: 12),
+                          width: widget.containerSize.width,
+                          height: widget.containerSize.height / 8,
+                          padding:
+                              EdgeInsets.only(top: widget.circleRadius / 2),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.all(8),
+                                width: 20,
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(30)),
+                                  color: AppConstant.primaryColor,
+                                ),
+                                child:
+                                    Image.asset(widget.product.icon.toString()),
+                              ),
+                              Text(
+                                widget.product.name.toString(),
+                                style: TextStyle(
+                                    color: widget.product.brandColor!.toColor(),
+                                    fontSize: 12),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        Container(
+                          width: 40,
+                          height: 40,
+                          padding: EdgeInsets.all(10),
+                          child: SvgPicture.asset(
+                              'assets/images/nav/bookmark.svg'),
+                        )
+                      ],
                     ),
                     Expanded(
                       child: Container(
@@ -108,13 +124,16 @@ class _ProductContainerState extends State<ProductContainer> {
                         child: Column(
                           children: [
                             Container(
+                              height: 32,
                               alignment: Alignment.topLeft,
                               margin: const EdgeInsets.only(
-                                right: 40,
+                                right: 20,
                               ),
                               child: Text(
                                 widget.product.productName.toString(),
                                 textAlign: TextAlign.start,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 12,

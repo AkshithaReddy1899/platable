@@ -4,8 +4,8 @@ import 'package:platable/constants/app_constants.dart';
 import 'package:platable/models/product_list_model.dart';
 
 class ProductReviews extends StatefulWidget {
-  final List<Reviews> reviews;
-  const ProductReviews({super.key, required this.reviews});
+  final Products product;
+  const ProductReviews({super.key, required this.product});
 
   @override
   State<ProductReviews> createState() => _ProductReviewsState();
@@ -13,7 +13,7 @@ class ProductReviews extends StatefulWidget {
 
 class _ProductReviewsState extends State<ProductReviews> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext congtext) {
     Size screenSize = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(15.0),
@@ -29,47 +29,50 @@ class _ProductReviewsState extends State<ProductReviews> {
                   RichText(
                     text: TextSpan(children: [
                       TextSpan(
-                        text: '3.0',
+                        text: widget.product.stars,
                         style: TextStyle(
-                            fontSize: 48, color: AppConstant.primaryTextColor),
+                            fontSize: 46, color: AppConstant.primaryTextColor),
                       ),
                       TextSpan(
                         text: '/5',
                         style: TextStyle(
-                            fontSize: 30, color: AppConstant.primaryTextColor),
+                            fontSize: 28, color: AppConstant.primaryTextColor),
                       ),
                     ]),
                   ),
                   Text(
                     'Based on 60 reviews',
                     style: TextStyle(
-                        fontSize: 16, color: AppConstant.thirdTextColor),
+                        fontSize: 12, color: AppConstant.thirdTextColor),
                   ),
                   RatingBarIndicator(
-                    rating: 3.0,
+                    rating: double.parse(widget.product.stars.toString()),
                     itemBuilder: (context, index) => Icon(
                       Icons.star_purple500_outlined,
                       color: AppConstant.primaryYellow,
                     ),
                     itemCount: 5,
-                    itemSize: 30.0,
+                    itemSize: 25.0,
                     unratedColor: AppConstant.unratedYellow,
                     direction: Axis.horizontal,
                   ),
                 ],
               ),
-              SizedBox(
-                width: 160,
-                child: Column(
-                  children: [
-                    const SizedBox(height: 8),
-                    chartRow(context, '5', 89),
-                    chartRow(context, '4', 8),
-                    chartRow(context, '3', 2),
-                    chartRow(context, '4', 1),
-                    chartRow(context, '1', 0),
-                    const SizedBox(height: 8),
-                  ],
+              SizedBox(width: 10,),
+              Expanded(
+                child: SizedBox(
+                  // width: 120,
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 8),
+                      chartRow(context, '5', 89),
+                      chartRow(context, '4', 8),
+                      chartRow(context, '3', 2),
+                      chartRow(context, '4', 1),
+                      chartRow(context, '1', 0),
+                      const SizedBox(height: 8),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -81,7 +84,7 @@ class _ProductReviewsState extends State<ProductReviews> {
               child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
-                  itemCount: widget.reviews.length,
+                  itemCount: widget.product.reviews!.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       padding: const EdgeInsets.all(5),
@@ -111,7 +114,7 @@ class _ProductReviewsState extends State<ProductReviews> {
                                           CrossAxisAlignment.center,
                                       children: [
                                         Text(
-                                          '${widget.reviews[index].name!.firstName![0].toString().toUpperCase()}${widget.reviews[index].name!.lastName![0].toString().toUpperCase()} ',
+                                          '${widget.product.reviews![index].name!.firstName![0].toString().toUpperCase()}${widget.product.reviews![index].name!.lastName![0].toString().toUpperCase()} ',
                                           style: TextStyle(
                                               color:
                                                   AppConstant.secondaryColor),
@@ -120,13 +123,13 @@ class _ProductReviewsState extends State<ProductReviews> {
                                     ),
                                   ),
                                   AppConstant().widgetforkRF16C1d1be(
-                                      '${widget.reviews[index].name!.firstName.toString()} ${widget.reviews[index].name!.lastName.toString()}'),
+                                      '${widget.product.reviews![index].name!.firstName.toString()} ${widget.product.reviews![index].name!.lastName.toString()}'),
                                 ],
                               ),
                               Column(
                                 children: [
                                   RatingBarIndicator(
-                                    rating: widget.reviews[index].reviewStars!,
+                                    rating: widget.product.reviews![index].reviewStars!,
                                     itemBuilder: (context, index) => Icon(
                                       Icons.star_purple500_outlined,
                                       color: AppConstant.primaryYellow,
@@ -137,7 +140,7 @@ class _ProductReviewsState extends State<ProductReviews> {
                                     direction: Axis.horizontal,
                                   ),
                                   Text(
-                                    widget.reviews[index].time.toString(),
+                                    widget.product.reviews![index].time.toString(),
                                     style: TextStyle(
                                         fontSize: 11,
                                         color: AppConstant.fouthTextColor),
@@ -152,7 +155,7 @@ class _ProductReviewsState extends State<ProductReviews> {
                           SizedBox(
                             width: screenSize.width,
                             child: Text(
-                              '"${widget.reviews[index].comment}"',
+                              '"${widget.product.reviews![index].comment}"',
                               textAlign: TextAlign.start,
                               style: const TextStyle(
                                   fontSize: 16,
