@@ -46,8 +46,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       allProducts = data.products;
       saveProducts = saveData.products;
     });
-    print(allProducts);
-    print(allProducts![0].brandColor);
   }
 
   @override

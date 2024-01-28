@@ -106,7 +106,7 @@ class _ProductContainerState extends State<ProductContainer> {
                         Container(
                           width: 40,
                           height: 40,
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           child: SvgPicture.asset(
                               'assets/images/nav/bookmark.svg'),
                         )

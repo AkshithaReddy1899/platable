@@ -58,7 +58,7 @@ class _ProductReviewsState extends State<ProductReviews> {
                   ),
                 ],
               ),
-              SizedBox(width: 10,),
+              const SizedBox(width: 10,),
               Expanded(
                 child: SizedBox(
                   // width: 120,

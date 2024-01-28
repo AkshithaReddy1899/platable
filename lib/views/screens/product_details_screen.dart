@@ -315,7 +315,6 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                           alignment: Alignment.topLeft,
                           child: AppConstant().commonButton(() {
                             cartProvider.addItemToCart(widget.product);
-                            print(cartProvider.cartItems[0].quantity);
                             SnackBar snackBar = SnackBar(
                               content: Text(
                                   '${widget.product.productName} added to cart'),

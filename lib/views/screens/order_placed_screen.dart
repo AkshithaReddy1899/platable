@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:platable/constants/components/bottom_nav_bar.dart';
 
 import '../../constants/app_constants.dart';
+import '../../constants/components/bottom_nav_bar.dart';
 import '../../services/state_management.dart';
-import 'home_screen.dart';
 
 class OrderPlaced extends ConsumerStatefulWidget {
   const OrderPlaced({super.key});

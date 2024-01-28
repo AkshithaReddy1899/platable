@@ -36,7 +36,7 @@ class _BagScreenState extends ConsumerState<BagScreen> {
       }, 'Bag', 130),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           width: screenSize.width,
           height: screenSize.height,
           child: Stack(
@@ -444,7 +444,7 @@ class _BagScreenState extends ConsumerState<BagScreen> {
                           cartProvider.totalPrice.toString()),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
